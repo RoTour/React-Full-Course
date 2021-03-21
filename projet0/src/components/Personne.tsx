@@ -1,15 +1,13 @@
 import React, { ComponentProps } from 'react';
 import AgePersonne from './AgePersonne';
 
-class Personne extends React.Component<ComponentProps<any>> {
-  render() {
-    return (
-      <>
-        <h1> {this.props.name} </h1>
-        <AgePersonne age={this.props.age}/>
-      </>
-    );
-  }
+function Personne(props: ComponentProps<any>) {
+  return (
+    <>
+      <h1> {props.name} </h1>
+      <AgePersonne age={props.age}/>
+    </>
+  );
 }
 
 export default Personne;

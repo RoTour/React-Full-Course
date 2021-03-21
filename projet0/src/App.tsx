@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import Personne from './components/Personne';
+import Horloge from './containers/horloge/Horloge'
 import './App.css';
 
 
 function App() {
   return (
     <>
+      <Horloge />
       <Personne name="Robin TOURNE" age="19"/>
       <Personne name="Dmitrov" age="20"/>
       <Personne name="Pierre" age="42"/>
