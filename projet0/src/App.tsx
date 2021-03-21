@@ -1,19 +1,28 @@
 import React from 'react';
-import Personne from './components/Personne';
+import Personne from './components/personne/Personne';
 import Horloge from './containers/horloge/Horloge'
 import './App.css';
 
 
-function App() {
-  return (
-    <>
-      <Horloge />
-      <Personne name="Robin TOURNE" age="19"/>
-      <Personne name="Dmitrov" age="20"/>
-      <Personne name="Pierre" age="42"/>
-      <Personne name="Cath" age="19"/>
-    </>
-);
+class App extends React.Component {
+  state = {
+    personnes: [
+      {name: "Robin TOURNÉ", age: 19},
+      {name: "Dmitrov", age: 20},
+      {name: "Pierre", age: 42},
+      {name: "Cath", age: 19},
+    ]
+  }
+  render() {
+    return (
+      <>
+        <Horloge/>
+        {this.state.personnes.map((it) => {
+          return <Personne name={it.name} age={it.age}/>
+        })}
+      </>
+    );
+  }
 }
 
 // class App extends Component<any, any> {

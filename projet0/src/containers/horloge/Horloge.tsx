@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classes from './horloge.module.css';
 
 
 class Horloge extends Component<any, any> {
@@ -30,7 +31,7 @@ class Horloge extends Component<any, any> {
   render() {
     return (
       <>
-        <h2>Horloge: {this.state.date.toLocaleTimeString()}</h2>
+        <h2 className={classes.title}>Horloge: {this.state.date.toLocaleTimeString()}</h2>
         <h3>Compteur: {this.state.compteur}</h3>
       </>
     );
